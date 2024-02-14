@@ -1,0 +1,240 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --primary-color: #344955;
+  --primary-color-opacity: #707a80;
+  --secondary-color: #F9AA33;
+  --secondary-color-opacity: #fcdcad;
+  --primary-text-color: white;
+  --secondary-text-color: black;
+  --margin-pc-container: 15px;
+  --padding-pc-container: 30px;
+  --margin-tablet-container: 15px;
+  --padding-tablet-container: 20px;
+  --width-tablet-container: 768px;
+  --width-pc-container: 992px;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button {
+  padding: 5px 20px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.4rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-opacity);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-color-opacity);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"] {
+  height: 32px;
+  width: -webkit-fill-available;
+  padding: 0px 10px;
+  border-radius: 5px;
+  border-color: var(--primary-color);
+  font-size: 1.8rem;
+  display: block;
+}
+
+select {
+  height: 36px;
+  width: -webkit-fill-available;
+  border-radius: 5px;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+table {
+  font-size: 2rem;
+  border: 1px solid var(--primary-color);
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+
+table tbody td {
+  font-size: 1.9rem;
+}
+
+table tr:nth-child(even) {
+  background: #D0E4F5;
+}
+
+table thead {
+  background: var(--primary-color);
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, var(--primary-color) 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, var(--primary-color) 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, var(--primary-color) 100%);
+  border-bottom: 2px solid #444444;
+}
+
+table thead th {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+
+table thead th:first-child {
+  border-left: none;
+}
+
+table tfoot {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #444444;
+}
+
+table tfoot td {
+  font-size: 1.9rem;
+}
+
+table tfoot .links {
+  text-align: right;
+}
+
+table tfoot .links a {
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 8px 20px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.4rem;
+}
+
+.control-list {
+  padding: 0px var(--padding-tablet-container);
+  height: 36px;
+  text-align: end;
+  margin-bottom: 10px;
+  margin-bottom: 0px;
+}
+
+/* propietario form */
+.propietario-form {
+  width: 1024px;
+  margin: 0px auto 25px auto;
+  display: grid;
+  grid-template-areas:
+    "nombrecompleto nombrecompleto genero"
+    "email celular ."
+    ". . control";
+  gap: 10px 15px;
+}
+
+.propietario-form>.nombrecompleto {
+  grid-area: nombrecompleto;
+}
+
+.propietario-form>.genero {
+  grid-area: genero;
+}
+
+.propietario-form>.email {
+  grid-area: email;
+}
+
+.propietario-form>.celular {
+  grid-area: celular;
+}
+
+.propietario-form>.genero {
+  grid-area: genero;
+}
+
+.propietario-form>.control {
+  grid-area: control;
+  justify-self: flex-end;
+}
+
+/* mascota form */
+.mascota-form {
+  width: 1024px;
+  margin: 0px auto 25px auto;
+  display: grid;
+  grid-template-areas:
+    "nombre nombre raza"
+    "edad propietario propietario"
+    ". . control";
+  gap: 10px 15px;
+}
+
+.mascota-form>.nombre {
+  grid-area: nombre;
+}
+
+.mascota-form>.raza {
+  grid-area: raza;
+}
+
+.mascota-form>.propietario {
+  grid-area: propietario;
+}
+
+.mascota-form>.edad {
+  grid-area: edad;
+}
+
+.mascota-form>.control {
+  grid-area: control;
+  justify-self: end;
+}
