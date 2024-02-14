@@ -1,0 +1,31 @@
+---
+const { nombre, registro, imagen } = Astro.props;
+---
+
+<article>
+  <img src=`/img/personal/${imagen}` alt="..." />
+  <div>
+    <p><strong>{nombre}</strong></p>
+    <p>{registro}</p>
+  </div>
+</article>
+
+<style>
+  article {
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    height: 75%;
+  }
+
+  p {
+    margin-top: 7px;
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+    text-align: center;
+  }
+</style>

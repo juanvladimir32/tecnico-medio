@@ -1,0 +1,38 @@
+<?php if ($error): ?>
+<p>Error</p>
+<?php endif; ?>
+
+<div class="control-list">
+  <a href="/mascota/form" class="btn btn-primary">Crear</a>
+</div>
+
+<?php if (!$error): ?>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Raza</th>
+    <th scope="col">Edad</th>
+    <th scope="col">Propietario</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <?php foreach ($mascotas as $key=>$mascota): ?>
+  <tr>
+    <th scope="row"> <?= $key + 1 ?> </th>
+    <td> <?= $mascota['nombre'] ?> </td>
+    <td> <?= $mascota['raza'] ?> </td>
+    <td> <?= $mascota['edad'] ?> </td>
+    <td> <?= $mascota['propietario_id'] ?></td>
+    <td>
+      <a href="/mascota/<?= $mascota['id'] ?>/edit">😅</a>
+      <a href="/mascota/<?= $mascota['id'] ?>/destroy">👌</a>
+    </td>
+  </tr>
+  <?php endforeach; ?>
+  </tbody>
+</table>
+<?php endif; ?>

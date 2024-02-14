@@ -1,0 +1,41 @@
+propietarios:
+  - nombre: DR. PANCHO CAVERO
+    curriculum: Médico Veterinario egresado de la Universidad Nacional Mayor de San Marcos, líder de opinión en temas de Neurología, traumatología y Ortopedia Veterinaria, Diplomado de Traumatología y Ortopedia en CEAMVET-México y realizó una pasantía en la Clínica San Juan de Dios, 2007. Expositor de innumerables Congresos de Medicina Veterinaria y como Infuencer en temas relacionados a los animales y el medio ambiente. Condecorado en el 2011 por la UNMSM, por su contribución en el desarrollo de la Medicina Veterinaria en el Perú y Medalla Cívica de la orden Santiago de Apóstol en “Reconocimiento al desarrollo de técnicas y procedimientos innovadores en el ejercicio de la Medicina Veterinaria” por la Municipalidad de Santiago de Surco 2005
+    imagen: pancho.png
+  - nombre: DRA. FIORELLA COCHELLA
+    curriculum: MV. MBA. Dplm. Fiorella Cochella. Médica Veterinaria Etóloga Clínica, orientada hacia el comportamiento y bienestar animal de animales de compañía. Egresada de la Universidad Nacional Mayor de San Marcos (UNMSM), Maestra en Administración de Negocios (UPC), Diplomado en Comportamiento animal (VetesWeb), actualmente cursando la Maestría en Etología Clínica en Cambridge International University. Docente Universidad ESAN, en el Curso de Gestión de Operaciones del Diplomado de Gestión de Negocios Veterinarios. Socia Cofundadora, Directora de Operaciones del Grupo Pancho Cavero. Gerente de Operaciones de la Sede San Borja. Se desempeñó como Gerente de Línea en reconocidas empresas del medio veterinario.
+    imagen: fiorella.jpg
+personal:
+  - nombre: M.V. Dipl. Victor Raul Silva Gonzales
+    registro: CMVP:8334
+    imagen: 15.jpg
+  - nombre: M.V Dipl Diana Figueroa Fernández
+    registro: CMVP:13079
+    imagen: 16.jpg
+  - nombre: MV. Turpo Vigoria, Melissa
+    registro: CMVP:11940
+    imagen: 17.jpg
+  - nombre: MVZ. Saldaña Martinez, Kiara Lucia
+    registro: CMVP:12713
+    imagen: 18.jpg
+  - nombre: MVZ. Mg(c). Dipl. Quintana Flores, Fredy
+    registro: CMVP:12355
+    imagen: 19.jpg
+  - nombre: MV.MBA.Dplm. Fiorella Cochella Vinces
+    registro: CMVP:4283
+    imagen: 20.jpg
+  - nombre: M.V. Xioxmy Shiara Manrique Herrera
+    registro: CMVP:12338
+    imagen: 23.jpg
+  - nombre: M.V. Ana Cristina Rosales Salas
+    registro: CMVP:12410
+    imagen: 24.jpg
+  - nombre: M.V. Brigitte Aguirre Gereda
+    registro: CMVP:12012
+    imagen: 26.jpg
+  - nombre: M.V. Angel Gonzalo Aguirre Sosa
+    registro: CMVP:11373
+    imagen: 27.jpg
+  - nombre: M.V. Dipl. Silvana Giannina Garaycochea Córdova
+    registro: CMVP:10865
+    imagen: 29.jpg

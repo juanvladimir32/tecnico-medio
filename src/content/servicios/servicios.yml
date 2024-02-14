@@ -1,0 +1,28 @@
+servicios:
+  - nombre: Acupuntura
+    descripcion: La Acupuntura Veterinaria actúa complementando en conjunto a diversas especialidades de la profesión, viendo al individuo como un todo.
+    imagen: acupuntura.png
+  - nombre: Anestesia
+    descripcion: Pensando en la seguridad del paciente, antes de inducirlo a la anestesia, debemos evaluarlo físicamente, así como a través de exámenes preoperatorios.
+    imagen: anestesia.png
+  - nombre: Cardiología
+    descripcion: Los exámenes cardiológicos periódicos se han vuelto una práctica necesaria permitiendo la identificación y tratamiento de enfermedades cardíacas.
+    imagen: cardiologia.png
+  - nombre: Cirugía Especializada
+    descripcion: Nuestros profesionales se encuentran capacitados para realizar todo tipo de cirugías especializadas, desde cirugías plásticas hasta neurocirugías. 
+    imagen: cirugia_esp.png
+  - nombre: Cirugía General
+    descripcion: Nuestros profesionales se encuentran capacitados para realizar todo tipo de cirugías generales, desde esterilizaciones, hasta extracción de tumores 
+    imagen: cirugia.png
+  - nombre: Endocrinología
+    descripcion: La endocrinología veterinaria es el área de la medicina veterinaria que se dedica al estudio de los desórdenes de las glándulas endocrinas. 
+    imagen: endocrinologia.png
+  - nombre: Medicina Regenerativa
+    descripcion: En la Clínica Veterinaria Pancho Cavero, hemos implementado las mismas técnicas de humanos en beneficio de nuestros pacientes de 4 patas. 
+    imagen: celulas_madre.png
+  - nombre: Dermatología
+    descripcion: La dermatología veterinaria es la especialidad que se dedica al estudio de las enfermedades de la piel, las uñas y el pelo. 
+    imagen: dermatologia.png
+  - nombre: Neurología
+    descripcion: La neurología es la especialidad que se dedica al diagnóstico y tratamiento de enfermedades que afectan el sistema nervioso. 
+    imagen: neurologia.png

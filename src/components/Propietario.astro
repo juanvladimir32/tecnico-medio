@@ -1,0 +1,42 @@
+---
+import PropietarioLeftItem from "./PropietarioLeftItem.astro";
+import PropietarioRightItem from "./PropietarioRightItem.astro";
+
+const { propietarios } = Astro.props;
+---
+
+<section class="propietario">
+  {
+    propietarios.map((item: any, index: number) =>
+      (index + 1) % 2 == 0 ? (
+        <PropietarioLeftItem
+          nombre={item.nombre}
+          curriculum={item.curriculum}
+          imagen={item.imagen}
+        />
+      ) : (
+        <PropietarioRightItem
+          nombre={item.nombre}
+          curriculum={item.curriculum}
+          imagen={item.imagen}
+        />
+      ),
+    )
+  }
+</section>
+
+<style>
+  section {
+    box-sizing: border-box;
+    width: var(--width-tablet-container);
+    margin: 0px auto;
+    padding: 0px var(--padding-tablet-container);
+  }
+
+  @media screen and (min-width: 769px) {
+    section {
+      width: var(--width-pc-container);
+      padding: 0px var(--padding-tablet-container);
+    }
+  }
+</style>

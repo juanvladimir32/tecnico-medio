@@ -1,0 +1,37 @@
+---
+const { eslogan, servicios } = Astro.props;
+---
+
+<section>
+  <p>{eslogan}</p>
+  {servicios.map((servicio: any) => <p class="servicios">{servicio}</p>)}
+</section>
+
+<style>
+  section {
+    width: var(--width-tablet-container);
+    margin: 0px auto 25px auto;
+    padding: var(--padding-tablet-container);
+    border-radius: 7px;
+    box-sizing: border-box;
+    background-color: #f3d8b0;
+  }
+
+  section > p:nth-child(1) {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .servicios {
+    margin-top: 15px;
+    font-size: 1.8rem;
+  }
+
+  @media screen and (min-width: 769px) {
+    section {
+      width: var(--width-pc-container);
+      padding: var(--padding-pc-container);
+    }
+  }
+</style>

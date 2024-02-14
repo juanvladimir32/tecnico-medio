@@ -1,0 +1,10 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Servicio from "../components/Servicio.astro";
+
+import data from "../content/servicios/servicios.yml";
+---
+
+<BaseLayout title="Servicios">
+    <Servicio servicios={data.servicios} />
+</BaseLayout>

@@ -1,0 +1,38 @@
+---
+import PersonalItem from "./PersonalItem.astro";
+
+const { personal } = Astro.props;
+---
+
+<section>
+  {
+    personal.map((item: any) => (
+      <PersonalItem
+        nombre={item.nombre}
+        registro={item.registro}
+        imagen={item.imagen}
+      />
+    ))
+  }
+</section>
+
+<style>
+  section {
+    margin: 35px auto 0px auto;
+    width: var(--width-tablet-container);
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(175px, 225px));
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    row-gap: 15px;
+  }
+
+  @media screen and (min-width: 769px) {
+    section {
+      grid-template-columns: repeat(4, minmax(225px, 250px));
+      width: var(--width-pc-container);
+    }
+  }
+</style>

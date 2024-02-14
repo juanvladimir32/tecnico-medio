@@ -1,0 +1,54 @@
+<?php if ($error): ?>
+<p>Error desde html </p>
+<?php endif; ?>
+
+<?php if (!$error): ?>
+<form action="/mascota/form" method="post" autocomplete="off" class="mascota-form">
+  <input type="hidden" name="id" value="<?= $mascota['id'] ?? 0 ?>" hidden>
+
+  <div class="nombre">
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre"
+           minlength="2" maxlength="75"
+           value="<?= $mascota['nombre'] ?? '' ?>"
+           id="nombre">
+  
+  </div>
+
+  <div class="raza">
+    <label for="raza">Raza</label>
+    <input type="text" name="raza"
+           value="<?= $mascota['raza'] ?? '' ?>" id="raza"
+           minlength="7" maxlength="15"
+           required
+    >
+  </div>
+ 
+  <div class="edad">
+    <label for="edad">Edad</label>
+    <input type="number" name="edad"
+           value="<?= $mascota['edad'] ?? '' ?>" id="edad"
+           min="0" max="100"
+           required
+    >
+  </div>
+
+  <div class="propietario">
+    <label for="propietario_id">Propietario</label>
+    <select name="propietario_id" id="propietario_id" required>
+      <?php foreach ($propietarios as $propietario): ?>
+        <option value="<?= $propietario['id'] ?>"
+                <?= $propietario['id'] == ($mascota['propietario_id'] ?? 0) ? 'selected' : '' ?>
+        >
+          <?= $propietario['nombrecompleto'] ?>
+        </option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+
+  <div class="control">
+    <a href="/mascota/form" class="btn btn-secondary">Nuevo</a>
+    <button class="btn-primary">Save</button>
+  </div>
+</form>
+<?php endif; ?>

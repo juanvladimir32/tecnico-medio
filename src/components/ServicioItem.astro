@@ -1,0 +1,33 @@
+---
+const { nombre = "", descripcion = "", imagen = "" } = Astro.props;
+---
+
+<article>
+  <img src=`/img/servicios/${imagen}` alt="..." srcset="" />
+  <div>
+    <h3>{nombre}</h3>
+    <p>{descripcion}</p>
+  </div>
+</article>
+
+<style>
+  article {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  article > div > h3 {
+    color: var(--primary-color);
+    font-size: 2.1rem;
+  }
+
+  article > div > p {
+    margin-top: 5px;
+    font-size: 1.7rem;
+    line-height: 1.9rem;
+  }
+
+  img {
+    height: 75px;
+  }
+</style>

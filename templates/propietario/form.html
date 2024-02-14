@@ -1,0 +1,40 @@
+<?php if ($error): ?>
+<p>Error desde html </p>
+<?php endif; ?>
+
+<?php if (!$error): ?>
+<form action="/propietario/form" method="post" autocomplete="off" class="propietario-form">
+  <input type="hidden" name="id" value="<?= $propietario['id'] ?? 0 ?>">
+
+  <div class="nombrecompleto">
+    <label for="nombrecompleto">Nombre completo</label>
+    <input type="text" name="nombrecompleto" minlength="2" maxlength="75"
+      value="<?= $propietario['nombrecompleto'] ?? '' ?>" id="nombrecompleto">
+  </div>
+
+  <div class="email">
+    <label for="email">Email</label>
+    <input type="email" name="email" value="<?= $propietario['email'] ?? '' ?>" id="email" minlength="5" maxlength="25"
+      required>
+  </div>
+
+  <div class="celular">
+    <label for="celular">Celular</label>
+    <input type="tel" name="celular" value="<?= $propietario['celular'] ?? '' ?>" id="celular" minlength="7"
+      maxlength="15" required>
+  </div>
+
+  <div class="genero">
+    <label for="genero">Genero</label>
+    <select name="genero" id="genero" required>
+      <option value="M">Masculino</option>
+      <option value="F">Femenino</option>
+    </select>
+  </div>
+
+  <div class="control">
+    <a href="/propietario/form" class="btn btn-secondary">Nuevo</a>
+    <button class="btn-primary">Save</button>
+  </div>
+</form>
+<?php endif; ?>

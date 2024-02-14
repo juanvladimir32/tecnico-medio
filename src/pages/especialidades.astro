@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Brand from "../components/Brand.astro";
+import Especialidad from "../components/Especialidad.astro";
+import data from "../content/home/home.yml";
+---
+
+<BaseLayout title="Home">
+  <Brand eslogan={data.eslogan} servicios={data.servicios} />
+  <Especialidad especialidades={data.especialidades} />
+</BaseLayout>

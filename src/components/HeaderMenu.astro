@@ -1,0 +1,42 @@
+---
+import HeaderMenuItem from "./HeaderMenuItem.astro";
+---
+
+<header>
+  <a href="/">
+    <img src="/img/icons/x.png" alt="..." />
+  </a>
+  <input type="text" placeholder="Buscar" />
+  <nav>
+    <ul>
+      <HeaderMenuItem title="Especialidades" imagen="x.png" url="/especialidades" />
+      <HeaderMenuItem title="Servicios" imagen="x.png" url="/servicios" />
+      <HeaderMenuItem title="Medicos" imagen="x.png" url="/medicos" />
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    height: 60px;
+    padding: 0px var(--padding-tablet-container);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header > a {
+    width: 225px;
+  }
+
+  input {
+    width: 320px;
+  }
+
+  nav > ul {
+    display: flex;
+    justify-content: end;
+    column-gap: 15px;
+  }
+</style>

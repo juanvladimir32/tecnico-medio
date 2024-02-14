@@ -1,0 +1,94 @@
+<?php if ($error): ?>
+<p>Error</p>
+<?php endif; ?>
+
+<div class="control-list">
+  <a href="/propietario/form" class="btn btn-primary">Crear</a>
+</div>
+
+<button id="btn-card">Cargar html de template</button>
+
+<?php if (!$error): ?>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre completo</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Email</th>
+      <th scope="col">Genero</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <?php foreach ($propietarios as $key=>$propietario): ?>
+    <tr>
+      <th scope="row">
+        <?= $key + 1 ?>
+      </th>
+      <td>
+        <?= $propietario['nombrecompleto'] ?>
+      </td>
+      <td>
+        <?= $propietario['celular'] ?>
+      </td>
+      <td>
+        <?= $propietario['email'] ?>
+      </td>
+      <td>
+        <?= $propietario['genero'] ?>
+      </td>
+      <td>
+        <a href="/propietario/<?= $propietario['id'] ?>/edit">😅</a>
+        <a href="/propietario/<?= $propietario['id'] ?>/destroy">👌</a>
+      </td>
+    </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>
+<?php endif; ?>
+
+<div class="card">
+
+</div>
+
+<template>
+  <select name="" id="">
+    <?php foreach ($columns as $value): ?>
+    <option value="<?= $value ?>">
+      <?= $value ?>
+    </option>
+    <?php endforeach; ?>
+  </select>
+</template>
+
+<template id="propietarios-template">
+  <div id="propietarios-container">
+    <?php foreach ($propietarios as $key=>$propietario): ?>
+    <div class="propietarios-list" data-id="<?= $propietario['id'] ?? 0 ?>">
+      <h3>
+        <?= $propietario['nombrecompleto'] ?? '' ?>
+      </h3>
+      <p>
+        <?= $propietario['email'] ?? '' ?>
+      </p>
+      <span>
+        <?= $propietario['celular'] ?? '' ?>
+      </span>
+      <strong>
+        <?= $propietario['genero'] ?? '' ?>
+      </strong>
+    </div>
+    <?php endforeach; ?>
+  </div>
+</template>
+
+<script>
+  const btnCard = document.getElementById('btn-card');
+  btnCard.addEventListener('click', (evt) => {
+    const cardTemplate = document.getElementById('propietarios-template');
+    const divContainerTemp = cardTemplate.content;
+    document.querySelector('.card').append(divContainerTemp);
+  })
+</script>

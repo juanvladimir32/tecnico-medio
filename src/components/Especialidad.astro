@@ -1,0 +1,40 @@
+---
+import EspecialidadItem from "./EspecialidadItem.astro";
+const { especialidades } = Astro.props;
+---
+
+<section>
+  {
+    especialidades.map((especialidad: any) => (
+      <EspecialidadItem
+        imagen={especialidad.imagen}
+        nombre={especialidad.nombre}
+        descripcion={especialidad.descripcion}
+        detalle={especialidad.detalle}
+      />
+    ))
+  }
+</section>
+
+<style>
+  section {
+    box-sizing: border-box;
+    width: var(--width-tablet-container);
+    margin: 0px auto;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 250px));
+    column-gap: 15px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 769px) {
+    section {
+      grid-template-columns: repeat(3, minmax(250px, 300px));
+      width: var(--width-pc-container);
+    }
+  }
+</style>

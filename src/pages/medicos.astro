@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Propietario from "../components/Propietario.astro";
+import Personal from "../components/Personal.astro";
+
+import data from "../content/personal/personal.yml";
+---
+
+<BaseLayout title="Personal">
+    <div id="container-propietarios"></div>
+    <Propietario propietarios={data.propietarios} />
+    <hr />
+    <Personal personal={data.personal} />
+</BaseLayout>
+
+<script>
+    function htmlPropietarios(element) {
+        return `
+        <div class="propietarios-list" data-id="${element.id}">
+        <h3>${element.nombrecompleto}</h3>
+        <p>${element.email}</p>
+        <span>${element.celular}</span>
+        <strong>${element.genero}</strong>
+        </div>
+        `;
+    }
+    
+    const container = document.getElementById("container-propietarios");
+    const url = "http://localhost:8080/api/v1";
+    fetch(`${url}/propietarios`, {
+        method: "GET",
+        headers: {
+            /*"Content-Type": "application/json",*/
+            accept: "application/json",
+        },
+        /*body: JSON.stringify({})*/
+    })
+        .then((res) => {
+            console.log(res);
+            if (res.status === 200) {
+                return res.json();
+            }
+        })
+        .then((jsonObject) => {
+            console.log(jsonObject);
+            let html = "";
+            jsonObject.data.forEach((element) => {
+                html += htmlPropietarios(element);
+            });
+
+            container.innerHTML = html;
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+</script>

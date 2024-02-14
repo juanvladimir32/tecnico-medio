@@ -1,0 +1,20 @@
+eslogan: 40 años tratando mascotas en Santa Cruz
+servicios:
+  - En nuestra clínica veterinaria tratamos no solo a tu perro, a tu gato o a la mascota que tengas, tratamos a tu familia, mejorando juntos para ofrecerte un trato humano y el mejor servicio veterinario.
+  - Disponemos de dos clínicas veterinarias en Madrid y una tercera en Rivas Vaciamadrid que cuentan con todos los servicios y los mejores profesionales veterinarios.
+especialidades:
+  - nombre: Veterinarios con mucha experiencia
+    descripcion: Hace más de 40 años el equipo de la clínica trabaja para prestar un servicio profesional y de calidad a sus clientes. Ha sido pionera en el uso de nuevas técnicas y tratamientos desde sus comienzos.
+    detalle: Conócenos un poco mejor 
+    url: #
+    imagen: experiencia.jpg
+  - nombre: Planes de Salud veterinaria 
+    descripcion: Tenemos disponibles planes de prevención y salud para perros y gatos con facilidades de pagos para vuestra comodidad.
+    detalle: Conoce nuestros planes
+    url: #
+    imagen: planes.jpg
+  - nombre: Diagnóstico por imagen
+    descripcion: Realizamos diagnósticos mucho más concluyentes. Disponemos de alta tecnología con un amplia variedad de equipos de diagnóstico por imagen. Radiografías, ecorafías, elctrocardiogramas.
+    detalle: Te informamos
+    url: #
+    imagen: ecografia.jpg

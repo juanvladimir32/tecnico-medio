@@ -1,0 +1,34 @@
+---
+import ServicioItem from "./ServicioItem.astro";
+const { servicios } = Astro.props;
+---
+
+<section>
+  {
+    servicios.map((servicio: any) => (
+      <ServicioItem
+        nombre={servicio.nombre}
+        descripcion={servicio.descripcion}
+        imagen={servicio.imagen}
+      />
+    ))
+  }
+</section>
+
+<style>
+  section {
+    margin: 0px auto;
+    width: var(--width-tablet-container);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(275px, 325px));
+    gap: 10px 15px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 769px) {
+    section {
+      grid-template-columns: repeat(3, minmax(325px, 375px));
+      width: var(--width-pc-container);
+    }
+  }
+</style>
