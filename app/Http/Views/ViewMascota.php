@@ -16,7 +16,7 @@ class ViewMascota
         $title = 'Home mascota';
         $error = array_key_exists('error', $mascotas);
         $content = '../templates/mascota/index.html';
-        include '../templates/layouts/base.html';
+        include '../templates/layouts/astro.html';
     }
 
     public function showForm(array $propietarios, array $mascota = []):void
