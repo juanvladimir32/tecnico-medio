@@ -17,6 +17,7 @@ composer.lock
 /tmp
 #Astro
 # build output
+dist/
 # generated types
 .astro/
 
